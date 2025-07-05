@@ -1,40 +1,36 @@
 ﻿<!DOCTYPE html>
-
-<html lang="zh-cn" >
+<html lang="zh-cn">
 <head>
     <meta charset="utf-8" />
     <title>个人主页|黄联唯</title>
     <!-- 引入Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+
+        .card {
+            transition: transform 0.3s;
+        }
+
+            .card:hover {
+                transform: translateY(-10px);
+            }
+
+        @media (max-width: 768px) {
+            .display-4 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
-<style>
-    /* 自定义颜色 */
-    :root {
-        --primary-color: #3498db; /* 主色调 */
-    }
-
-    /* 导航栏悬停效果 */
-    .navbar-nav .nav-link:hover {
-        color: var(--primary-color) !important;
-    }
-
-    /* 项目卡片动画 */
-    .card {
-        transition: transform 0.3s;
-    }
-
-        .card:hover {
-            transform: translateY(-10px);
-        }
-
-    /* 响应式调整 */
-    @media (max-width: 768px) {
-        .display-4 {
-            font-size: 2rem;
-        }
-        /* 手机端标题缩小 */
-    }
-</style>
 <body>
     <!-- 导航栏 -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -65,14 +61,16 @@
         <h2>关于我</h2>
         <div class="row">
             <div class="col-md-4">
-                <img src="E:/PHD/Self_website/lianwei.jpg" alt="头像" class="img-fluid rounded-circle">
+                <!-- 修正路径 -->
+                <img src="images/lianwei.jpg" alt="头像" class="img-fluid rounded-circle">
             </div>
             <div class="col-md-8">
                 <p>研究方向为计算光谱成像和微纳光子学</p>
                 <p>硕士研究课题为《基于微纳光子学的VIS-MIR微型计算光谱成像系统设计》</p>
                 <p>爱好唱歌和吃吃吃</p>
                 <div class="mt-3">
-                    <a href="E:/PHD/Self_website/lianwei_CV.docx" class="btn btn-outline-primary" download>下载简历</a>
+                    <!-- 修正路径 -->
+                    <a href="files/lianwei_CV.docx" class="btn btn-outline-primary" download>下载简历</a>
                 </div>
             </div>
         </div>
@@ -85,7 +83,8 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img src="E:/PHD/Self_website/VIS1.png" class="card-img-top" alt="研究1">
+                        <!-- 修正路径 -->
+                        <img src="images/VIS1.png" class="card-img-top" alt="研究1">
                         <div class="card-body">
                             <h5 class="card-title">面向可见光的超表面计算成像光谱仪</h5>
                             <p class="card-text">在400-700 nm的可见光波段，基于连续体中的准束缚态，设计一系列基于尺寸均匀变化的挖孔矩形阵列的亚波长尺寸超表面光谱调制器对光谱进行调制，而后使用基于压缩感知理论的正交匹配追踪法（OMP）重构算法对目标光谱进行计算重构，实现PSNR>35dB的高质量的计算光谱成像。</p>
@@ -95,7 +94,8 @@
                 </div>
                 <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img src="E:/PHD/Self_website/SWIR.png" class="card-img-top" alt="研究2">
+                        <!-- 修正路径 -->
+                        <img src="images/SWIR.png" class="card-img-top" alt="研究2">
                         <div class="card-body">
                             <h5 class="card-title">面向SWIR的超表面计算成像光谱仪</h5>
                             <p class="card-text">在900-1700 nm的可见光波段，基于连续体中的准束缚态，设计一系列基于尺寸均匀变化的挖孔矩形阵列的亚波长尺寸超表面光谱调制器对光谱进行调制，而后使用基于压缩感知理论的交替方向乘子法（ADMM)重构算法对目标光谱进行计算重构，实现光谱分辨率为5nm的高质量的计算光谱成像。</p>
@@ -105,7 +105,8 @@
                 </div>
                 <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img src="E:/PHD/Self_website/VIS1.png" class="card-img-top" alt="研究2">
+                        <!-- 修正路径 -->
+                        <img src="images/figure1.png" class="card-img-top" alt="研究3">
                         <div class="card-body">
                             <h5 class="card-title">面向NIR-MIR的超表面计算成像光谱仪</h5>
                             <p class="card-text">在900-1700 nm的可见光波段，基于连续体中的准束缚态，设计一系列基于尺寸均匀变化的挖孔矩形阵列的亚波长尺寸超表面光谱调制器对光谱进行调制，而后使用基于压缩感知理论的交替方向乘子法（ADMM)重构算法对目标光谱进行计算重构，实现光谱分辨率为5nm的高质量的计算光谱成像。</p>
@@ -113,7 +114,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- 重复以上结构添加更多项目 -->
             </div>
         </div>
     </section>
@@ -123,11 +123,11 @@
         <h2>联系我</h2>
         <form>
             <div class="mb-3">
-                <label class="form-label">黄联唯</label>
+                <label class="form-label">姓名</label>
                 <input type="text" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label class="form-label">zsdhlw@zjnu.edu.cn</label>
+                <label class="form-label">邮箱</label>
                 <input type="email" class="form-control" required>
             </div>
             <div class="mb-3">
@@ -141,7 +141,7 @@
     <!-- 页脚 -->
     <footer class="bg-dark text-white text-center py-3">
         <p>
-            © 2025 huanglianwei | 社交媒体：
+            © 2025 huanglianwei | 联系我：zsdhlw@zjnu.edu.cn
             <a href="#" class="text-white mx-2"><i class="bi bi-github"></i></a>
             <a href="#" class="text-white mx-2"><i class="bi bi-linkedin"></i></a>
         </p>
@@ -149,13 +149,12 @@
 
     <!-- 引入Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelector("form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("感谢留言！我会尽快回复。");
+            this.reset();
+        });
+    </script>
 </body>
-<script>
-    // 表单提交拦截（演示用）
-    document.querySelector("form").addEventListener("submit", function (e) {
-        e.preventDefault();
-        alert("感谢留言！我会尽快回复。");
-        this.reset();
-    });
-</script>
 </html>
