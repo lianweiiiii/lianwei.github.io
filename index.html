@@ -1,160 +1,424 @@
-﻿<!DOCTYPE html>
-<html lang="zh-cn">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8" />
-    <title>个人主页|黄联唯</title>
-    <!-- 引入Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="黄联唯个人主页">
+    <meta name="description" content="黄联唯学术主页，黄联唯个人介绍，简历下载">
+    <title>黄联唯|个人主页</title>
+    <!-- 引入Bootstrap的CSS文件 -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- 引入Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <style>
-        :root {
-            --primary-color: #3498db;
-        }
+     *{
+        margin: 0;
+        padding: 0;
+     }
+     body {
+        position: relative;
+        min-height: 100vh;
+        background-color: rgb(246, 247, 249);
+        padding-bottom: 50px; /* 等于footer高度 */
+    }
+     .header_top_area{
+        width: 100%;
+        height: 70px;
+        background-color: rgb(255, 255, 255);
+        /* border: 1px dashed black; */
+     }
+     .container{
+        width: 70%;
+        height: 70px;
+        /* background-color: rgb(240, 236, 236); */
+        margin: auto;
+        padding: auto;
+     }
+    a{
+            text-decoration: none;
+    }
+     body ul li{
+        list-style: none;
+     }
+    .left li{
+            float: left;
+            line-height: 70px;         
+            font-size: 15px;
+            font-weight: 700;
+            text-align: center;
+            padding: 0 30px;
+            position: relative;
+    }
+    .phone{
+        background: url(./img/tel.png) no-repeat 5px 26px;
+    }
+    .email{
+        background: url(./img/email.png) no-repeat 5px 27px;
+    }
+    .right{
+        float: right;
+    }
+    .right li{
+        float: left;
+        line-height: 70px;         
+        font-size: 15px;
+        font-weight: 700;
+        text-align: center;
+        padding: 0 30px;
+        position: relative;
+    }
+    li a{
+        color: rgb(140, 140, 140);
+        text-decoration: none;
 
-        .navbar-nav .nav-link:hover {
-            color: var(--primary-color) !important;
-        }
+    }
+    a:hover{
+        color: black;
+    }
+    .header_main{
+        width: 100%;
+        height: 120px;
+        border-bottom: 0.5px dashed rgb(214, 212, 212);
+        /* background-color: rgb(219, 220, 221); */
+    }
+    nav{
+        width: 100%;
+        height: 120px;
+        position: relative;
+        margin: 0px;
+    }
+    nav ul{
+        width: 100%;
+        height: 60px;
+        /* border: 1px solid black; */
+        margin-top: 35px;
+        position: absolute;
+    }
+    nav ul li{
+        float: left;
+        width: 150px;
+        height: 60px;
+        line-height: 60px;         
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        padding: 0 30px;
+        position: relative;
+    }
+    #name1{
+        font-size: 20px;
+        font-weight: 700;
+        width: 370px;
+        height: 60px;
+        padding: 0 0;
+    }
+    #cv_pic1{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: -10px;
+    }
 
-        .card {
-            transition: transform 0.3s;
-        }
+    .ml{
+        width: 250px;
+        height: 240px;
+        /* background-color: #f0e3e3; */
+        text-align: left;
+        font-size: 18px;
+        margin: 10px 0;
 
-            .card:hover {
-                transform: translateY(-10px);
-            }
+    }
+    .ml p{
+        height: 20px;
+        line-height: 40px;
+        padding: 10px 30px;
+    }
+    #name2{
+        font-size: 25px;
+        font-weight: 700;
+        padding: 0px 0px 20px 30px;
+    }
+    .re{
+        font-size: 20px;
+        font-weight: 700;
+        /* height: 20px;
+        line-height: 40px; */
+        
+        
+    }
+    .dongtai{
+        font-size: 20px;
+        font-weight: 700;
+    }
 
-        @media (max-width: 768px) {
-            .display-4 {
-                font-size: 2rem;
-            }
-        }
+    /* .footer {
+        background-color: #343a40;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+    } */
+    .footer {
+        background-color: #343a40;
+        color: white;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        position: absolute;
+        bottom: -5000px;
+        width: 100%;
+        /* left: 0; */
+    }
+
+
     </style>
 </head>
-<body>
-    <!-- 导航栏 -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+<body id="home" data-scroll-animation="true" data-spy= "scroll" data-target="#pages body">
+    <!-- 导航栏-->
+    <div class="header_top_area">
         <div class="container">
-            <a class="navbar-brand" href="#">黄联唯</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">关于我</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">研究内容</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">我的生活</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">联系</a></li>
+            <div class="lefthead">
+                <ul class="left">
+                    <li class="phone">
+                        <a href="tel:8619511336449">
+                            +8619511336449
+                        </a>
+                    </li>
+                    <li class="email">
+                        <a href="mailto:zsdhlw@zjnu.edu.cn">
+                            zsdhlw@zjnu.edu.cn
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="righthead">
+                <ul class="right">
+                    <li>
+                        <a href="https://github.com/lianweiiiii">Github</a>
+                    </li>
+                    <li>
+                        <a href="https://www.researchgate.net/profile/Lianwei-Huang/research">ResearchGate</a>
+                    </li>
+                    <li>
+                        <a href="#">WeChat</a>
+                    </li>
                 </ul>
             </div>
         </div>
-    </nav>
-
-    <!-- 主页Banner -->
-    <section class="bg-primary text-white text-center py-5">
-        <h1 class="display-4">在读研二的研究生</h1>
-        <p class="lead">期待探索更多未知</p>
-    </section>
-
-    <!-- 关于我 -->
-    <section id="about" class="py-5 container">
-        <h2>关于我</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <!-- 修正路径 -->
-                <img src="images/lianwei.jpg" alt="头像" class="img-fluid rounded-circle">
-            </div>
-            <div class="col-md-8">
-                <p>研究方向为计算光谱成像和微纳光子学</p>
-                <p>硕士研究课题为《基于微纳光子学的VIS-MIR微型计算光谱成像系统设计》</p>
-                <p>爱好唱歌和吃吃吃</p>
-                <div class="mt-3">
-                    <!-- 修正路径 -->
-                    <a href="files/lianwei_CV.docx" class="btn btn-outline-primary" download>下载简历</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 项目展示 -->
-    <section id="projects" class="bg-light py-5">
+    </div>
+    <div class="header_main">
         <div class="container">
-            <h2>研究内容</h2>
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="card">
-                        <!-- 修正路径 -->
-                        <img src="images/VIS1.png" class="card-img-top" alt="研究1">
-                        <div class="card-body">
-                            <h5 class="card-title">面向可见光的超表面计算成像光谱仪</h5>
-                            <p class="card-text">在400-700 nm的可见光波段，基于连续体中的准束缚态，设计一系列基于尺寸均匀变化的挖孔矩形阵列的亚波长尺寸超表面光谱调制器对光谱进行调制，而后使用基于压缩感知理论的正交匹配追踪法（OMP）重构算法对目标光谱进行计算重构，实现PSNR>35dB的高质量的计算光谱成像。</p>
-                            <a href="#" class="btn btn-primary">查看详情</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card">
-                        <!-- 修正路径 -->
-                        <img src="images/SWIR.png" class="card-img-top" alt="研究2">
-                        <div class="card-body">
-                            <h5 class="card-title">面向SWIR的超表面计算成像光谱仪</h5>
-                            <p class="card-text">在900-1700 nm的可见光波段，基于连续体中的准束缚态，设计一系列基于尺寸均匀变化的挖孔矩形阵列的亚波长尺寸超表面光谱调制器对光谱进行调制，而后使用基于压缩感知理论的交替方向乘子法（ADMM)重构算法对目标光谱进行计算重构，实现光谱分辨率为5nm的高质量的计算光谱成像。</p>
-                            <a href="#" class="btn btn-primary">查看详情</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card">
-                        <!-- 修正路径 -->
-                        <img src="images/figure1.png" class="card-img-top" alt="研究3">
-                        <div class="card-body">
-                            <h5 class="card-title">面向NIR-MIR的超表面计算成像光谱仪</h5>
-                            <p class="card-text">在900-1700 nm的可见光波段，基于连续体中的准束缚态，设计一系列基于尺寸均匀变化的挖孔矩形阵列的亚波长尺寸超表面光谱调制器对光谱进行调制，而后使用基于压缩感知理论的交替方向乘子法（ADMM)重构算法对目标光谱进行计算重构，实现光谱分辨率为5nm的高质量的计算光谱成像。</p>
-                            <a href="#" class="btn btn-primary">查看详情</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <nav class="Navigation_bar">
+                <ul>
+                    <li id="name1">
+                        <a href="">
+                            黄联唯（Huang, Lianwei）
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#personal-info">
+                            个人情况
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#researches">
+                            研究内容
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#academic-updates">
+                            动态
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact-me">
+                            联系我
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-    </section>
+    </div>
 
-    <!-- 联系方式 -->
-    <section id="contact" class="py-5 container">
-        <h2>联系我</h2>
-        <form>
-            <div class="mb-3">
-                <label class="form-label">姓名</label>
-                <input type="text" class="form-control" required>
+    <!-- 主页 -->
+    <section id="主页" class="py-5 container">
+        <div class="row">
+            <!-- 主页左侧部分 -->
+            <div class="col-md-4" >
+                <img src="./img/lianwei.jpg" alt="头像" width="250px" id="cv_pic1" class="img-fluid rounded-circle" >
+                <div class="col-md-8 ml">
+                    <p id="name2">黄联唯</p>
+                    <p>学历：硕士</p>
+                    <p>方向：计算光谱成像</p>
+                    <p>专业：光学工程</p>
+                    <p>学院：杭州高等研究院</p>
+                    <p>学校：浙江师范大学</p>
+                </div>
             </div>
-            <div class="mb-3">
-                <label class="form-label">邮箱</label>
-                <input type="email" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">留言</label>
-                <textarea class="form-control" rows="3"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">发送</button>
-        </form>
+            <!-- 主页右侧部分 -->
+            <div class="col-md-8">
+                <section id="personal-info">
+                    <h3><strong>个人情况</strong></h3>
+                    <ul>
+                        <li>姓名：黄联唯</li>
+                        <li>性别：女</li>
+                        <li>专业：光学工程</li>
+                        <li>方向：计算光谱成像</li>
+                        <li>学校：浙江师范大学</li>
+                        <li>学院：杭州高等研究院</li>
+                        <li>邮箱：zsdhlw@zjnu.edu.cn</li>
+                    </ul>
+                    <h3><strong>教育经历</strong></h3>
+                    <ul>
+                        <li>2023.10 - 至今，浙江师范大学，杭州高等研究院，光学工程，硕士</li>
+                        <li>2016.09 - 2020.07，贵州大学，大数据与信息工程学院，电子信息工程，学士</li>
+                    <li>
+                            <a href="files/lianwei_CV.docx" class="btn btn-outline-primary" download>查看简历</a>
+                    </li>
+                    </ul>
+                </section>
+
+                <section id="researches">
+                    <div>
+                    <h3><strong>研究内容</strong></h3>
+                    <div> 
+                        <li class="re">基于QBIC的可见光计算光谱成像系统</li>
+                        <ul>
+                        <li>在400-700 nm的可见光波段，基于连续体中的准束缚态，
+                            设计一系列基于尺寸均匀变化的挖孔矩形阵列的亚波长尺寸超表面光谱调制器对光谱进行调制，
+                            而后使用基于压缩感知理论的正交匹配追踪法（OMP）重构算法对目标光谱进行计算重构，
+                            实现PSNR>35dB的高质量的计算光谱成像。</li>
+                            <li><img src="./img/VIS1.png" width="500px" alt="400-700nm计算光谱成像"></li>
+                            <li><a href="https://doi.org/10.1117/12.3036190">论文：High-resolution Spectral Imaging with Quasi Bound States in the Continuum</a></li>
+                        </ul>
+                    </div>
+                    <div> 
+                        <li class="re">基于QBIC的短波红外计算光谱成像系统</li> 
+                        <ul>
+                        <li>在900-1700 nm的可见光波段，基于连续体中的准束缚态，
+                            设计一系列基于尺寸均匀变化的双椭圆阵列的超表面光谱调制器对光谱进行调制，
+                            而后使用基于压缩感知理论的交替方向乘子（ADMM）重构算法对目标光谱进行计算重构，
+                            实现高Q窄带与宽带协同调制的高质量的计算光谱成像。</li>
+                            <li><img src="./img/SWIR.png" width="500px" alt="900-1700计算光谱成像"></li>
+                            <li><a href="https://doi.org/10.1364/OE.551005">论文：Spectral encoding based on narrowband/broadband modulations of QBIC for computational spectral imaging</a></li>
+                        </ul>
+                    </div>
+                    <div> 
+                        <li class="re" id="pcms">基于PCMs的长波红外计算光谱成像系统</li> 
+                        <ul>
+                            <li>在8-14 μm的长波红外波段，利用相变材料的材料特性：</li>
+                            <li>1）基于TMM仿真设计薄膜相变材料光谱调制器，结合全连接网络对目标光谱进行重构，实现高质量光谱重构。</li>
+                            <li>2）基于RCWA仿真设计超表面相变材料光谱调制器，结合基于深度学习的重构算法对目标光谱进行端对端重构，
+                            实现了超宽光谱范围内的高质量、高分辨的计算光谱成像。</li>
+                            <li><img src="./img/PCMS.png" width="500px" alt="900-1700计算光谱成像"></li>
+                            <li><a href="#pcms">论文：正在撰写</a></li>
+                        </ul>
+                    </div>
+                    <div> 
+                        <li class="re" id="csunet">基于CS-Unet的计算光谱成像系统</li> 
+                        <ul>
+                            <li>在400-700 nm的可见光波段，融合Twist算法高鲁棒和UNet网络低延迟的特性，开发了一种CS-Unet重构算法，直接对图像进行三维重建。
+                                实现了高速、高鲁棒性及高质量的计算光谱成像。
+                            </li>
+                            <li><img src="./img/CSUnet.png" width="500px" alt="Unet网络"></li>
+                            <li><a href="#csunet">论文：已投稿至Optics and Lasers in Engineering，正在审稿中</a></li>
+                        </ul>
+                    </div>
+                    <div> 
+                        <li class="re" id="radar">基于复数神经网络的雷达干扰抑制</li> 
+                        <ul>
+                            <li>基于信号的复数统计特征，结合神经网络来进行角反干扰抑制。
+                            </li>
+                            <li><img src="./img/radar.png" width="500px" alt="CS-Unet"></li>
+                            <li><a href="#radar">论文：已接收待出版发表</a></li>
+                        </ul>
+                    </div>
+                    <div> 
+                        <li class="re" id="insole">基于深度学习的人体姿态识别智能鞋垫</li> 
+                        <ul>
+                            <li>开发基于布拉格光纤光栅的智能鞋垫识别人体姿态的核心算法，实现>98%的人体姿态识别准确率。</li>
+                            <li><img src="./img/鞋垫.png" width="500px" alt="CS-Unet"></li>
+                            <li><a href="#insole">论文：已投稿至Infrared Physics and Technology，正在审稿中</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3><strong>研究成果</strong></h3>
+                    <ul>
+                        <li>[1] <strong>Lianwei Huang</strong>, Chenning Tao, “High-resolution spectral imaging with quasi bound states in the continuum,” Proc. SPIE 13239, Optoelectronic Imaging and Multimedia Technology XI, 1323903 (22 November 2024). https://doi.org/10.1117/12.3036190</li>
+                        <li>[2] <strong>Lianwei Huang</strong>, Chenning Tao, Yusheng Zhang, Qiang Ling, Daru Chen, Zhenrong Zheng, Qiang Li, and Huanzheng Zhu, “Spectral encoding based on narrowband/broadband modulations of QBIC for computational spectral imaging,” <strong><em>Optics Express</em></strong> 33, 19166-19176 (2025). https://doi.org/10.1364/OE.551005</li>
+                        <li>[3] 陶陈凝, <strong>黄联唯</strong>, 陈达如, “基于连续体准束缚态的超表面光谱调制器及光谱成像系统,” 专利号: ZL 2025 1 0262655.4, 专利授权号: CN 119756576 B.</li>
+                        <li>[4] <strong>Lianwei Huang</strong>, Zhiyong Zhou, Chenning Tao, Daru Chen, Huanzheng Zhu, “CS-Unet: Spectral reconstruction via compressive sensing-deep learning synergy for robust nanophotonic spectral imaging,” <strong><em>Optics and Lasers in Engineering</em></strong>. (Under Review)</li>
+                        <li>[5] Zhaoxin Guo, <strong>Lianwei Huang</strong>, Yun Zhang, Qinglong Hua, Shuojia Feng, wanghao Hu, “A Statistical Feature-Driven Complex Domain Recurrent Residual Neural Networks for Corner Interference Mitigation,” IGARSS 2025, Feature Extraction and Reduction I. (Production)</li>
+                        <li>[6] Yihao He, <strong>Lianwei Huang</strong>, Qiang Ling, Yiwen Tang, Yusheng Zhang, Chenning Tao, Zhangwei Yu, Daru Chen, “Smart insole sensing system based on surface array fiber Bragg grating and deep learning for monitoring gait posture,” <strong><em>Infrared Physics and Technology</em></strong>. (Under Review)</li>
+                    </ul>
+                    </div>
+                    </div>
+                </section>
+                <section id="academic-updates">
+                    <h3><strong>动态</strong></h3>
+                    <div>
+                        <li class="dongtai">2024年10月，第一次学术会议之旅</li>
+                        <ul>
+                            <li><img src="./img/动态-会议.jpg" width="400px" alt="第一次学术会议之旅"></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <li class="dongtai">2024年11月，第一篇会议文章见刊！</li>
+                        <ul>
+                            <li><img src="./img/会议见刊.png" width="500px" alt="会议见刊"></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <li class="dongtai">2025年03月，专利获得授权</li>
+                        <ul>
+                            <li><img src="./img/专利.png" width="500px" alt="OE"></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <li class="dongtai">2025年05月，第一篇Optics Express！</li>
+                        <ul>
+                            <li><img src="./img/OE.png" width="500px" alt="OE"></li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="contact-me">
+                    <h3>联系我</h3>
+                    <ul>
+                        <li>
+                            <a href="mailto:zsdhlw@zjnu.edu.cn">邮箱：zsdhlw@zjnu.edu.cn</a>
+                        </li>
+                        <li>
+                            <a href="tel:19511336449">电话：19511336449</a>
+                        </li>
+                    </ul>
+                </section>
+            </div> 
+        </div>
+
     </section>
 
     <!-- 页脚 -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>
-            © 2025 huanglianwei | 联系我：zsdhlw@zjnu.edu.cn
-            <a href="#" class="text-white mx-2"><i class="bi bi-github"></i></a>
-            <a href="#" class="text-white mx-2"><i class="bi bi-linkedin"></i></a>
-        </p>
+    <footer class="footer">
+        <p>© 2025 huanglianwei | <a href="mailto:zsdhlw@zjnu.edu.cn">联系我：zsdhlw@zjnu.edu.cn</a></p>
     </footer>
-
     <!-- 引入Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.querySelector("form").addEventListener("submit", function (e) {
+    // 确保存在form元素后再添加事件监听器
+    const form = document.querySelector("form");
+    if (form) {
+        form.addEventListener("submit", function (e) {
             e.preventDefault();
             alert("感谢留言！我会尽快回复。");
             this.reset();
         });
+    }
     </script>
+
+
 </body>
 </html>
